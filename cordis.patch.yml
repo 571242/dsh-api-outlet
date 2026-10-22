@@ -1,0 +1,16 @@
+# The bundle inserts one host entry. The manifest's web client contributes its
+# configuration panel to the official plugin manager. The API and admin remain
+# loopback-only; GUI management uses authenticated owner-only Connection routes.
+- insert:
+    - id: dsh-api-outlet
+      name: '@oracle-ai/dsh-api-outlet'
+      config:
+        apiPort: 19388
+        adminPort: 19389
+        maxConcurrent: 2
+        requestsPerMinute: 60
+        timeoutMs: 600000
+        bodyLimit: 20971520
+        maxImagesPerRequest: 3
+        maxImageBytes: 5242880
+        stateDir: /srv/oracle-ai/dsh-home/profiles/cloud/.api-outlet

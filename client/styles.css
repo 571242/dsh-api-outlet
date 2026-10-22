@@ -1,0 +1,48 @@
+.dsh-outlet {
+  color: var(--dsw-alias-label-primary, CanvasText);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  width: 100%;
+  min-width: 0;
+}
+.dsh-outlet *, .dsh-outlet *::before, .dsh-outlet *::after { box-sizing: border-box; }
+.dsh-outlet p { margin: 0; overflow-wrap: anywhere; }
+.dsh-outlet h3 { margin: 0; font-size: 14px; font-weight: 500; line-height: 22px; }
+.dsh-outlet :focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 3px; }
+.dsh-outlet-section { border-top: 1px solid var(--dsw-alias-border-l2, currentColor); padding-block: 20px; display: flex; flex-direction: column; gap: 10px; }
+.dsh-outlet-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.dsh-outlet-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.dsh-outlet-state { display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px; }
+.dsh-outlet-state strong { font-weight: 500; }
+.dsh-outlet-hint, .dsh-outlet-model-meta { color: var(--dsw-alias-label-secondary, GrayText); font-size: 12px; line-height: 1.6; }
+.dsh-outlet-error { color: var(--dsw-alias-state-error-primary, CanvasText); border-inline-start: 2px solid currentColor; padding-inline-start: 10px; margin-bottom: 16px !important; }
+.dsh-outlet-label { font-weight: 500; }
+.dsh-outlet-providers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 0 20px; }
+.dsh-outlet-provider { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-width: 0; padding-block: 8px; }
+.dsh-outlet-provider > label { min-width: 0; min-height: 28px; overflow-wrap: anywhere; }
+.dsh-outlet-provider > span { flex-shrink: 0; }
+.dsh-outlet-search { width: 100%; }
+.dsh-outlet-models { display: flex; flex-direction: column; gap: 16px; max-height: 480px; overflow: auto; padding: 4px; scrollbar-gutter: stable; }
+.dsh-outlet-model-group { border: 0; padding: 0; margin: 0; min-width: 0; }
+.dsh-outlet-model-group legend { padding: 0 0 4px; font-weight: 500; overflow-wrap: anywhere; }
+.dsh-outlet-group-status { color: var(--dsw-alias-label-secondary, GrayText); font-size: 12px; font-weight: 400; margin-inline-start: 10px; }
+.dsh-outlet-model { display: flex; flex-direction: column; align-items: stretch; padding-block: 6px; min-width: 0; }
+.dsh-outlet-model > label { min-height: 30px; align-items: flex-start; overflow-wrap: anywhere; line-height: 1.6; }
+.dsh-outlet-model-meta { padding-inline-start: 24px; }
+.dsh-outlet-model[data-source-closed="true"] > label { color: var(--dsw-alias-label-secondary, GrayText); }
+.dsh-outlet-save { border-top: 1px solid var(--dsw-alias-border-l2, currentColor); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding-block: 16px 20px; }
+.dsh-outlet-select { appearance: auto; width: 100%; max-width: 100%; min-width: 0; min-height: 36px; padding: 6px 10px; color: var(--dsw-alias-label-primary, CanvasText); background: var(--dsw-alias-bg-base, Canvas); border: 1px solid var(--dsw-alias-border-l2, currentColor); border-radius: 8px; font: inherit; }
+.dsh-outlet-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 20px; margin: 8px 0; }
+.dsh-outlet-metrics > div { min-width: 0; }
+.dsh-outlet-metrics dt { color: var(--dsw-alias-label-secondary, GrayText); font-size: 12px; }
+.dsh-outlet-metrics dd { margin: 3px 0 0; font-size: 16px; font-weight: 500; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  .dsh-outlet-heading { align-items: flex-start; }
+  .dsh-outlet-providers { grid-template-columns: minmax(0, 1fr); }
+  .dsh-outlet-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .dsh-outlet-save { align-items: stretch; flex-direction: column; }
+  .dsh-outlet-save > .dsh-outlet-actions { justify-content: flex-end; }
+  .dsh-outlet-models { max-height: 55vh; }
+  .dsh-outlet-group-status { display: block; margin-inline-start: 0; }
+}
