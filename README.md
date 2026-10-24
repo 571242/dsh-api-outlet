@@ -1,9 +1,8 @@
 # dsh-api-outlet (cloud)
 
 Authenticated OpenAI-compatible API outlet over DSH's already-registered
-providers, rebuilt as an independent cloud package. This is **not** the local
-Windows plugin: it drops tunnels and per-machine Windows assumptions, keeps the
-loopback API/admin split, and adds per-client keys, image input, and a
+providers. It keeps the loopback API/admin split, has no tunnels and no
+per-machine Windows assumptions, and adds per-client keys, image input, and a
 Responses subset.
 
 - API (public, via Nginx `/v1` reverse proxy): `http://127.0.0.1:19388`
